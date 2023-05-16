@@ -42,6 +42,15 @@ public class RomanPrinter {
                     row[5] = row[5] + " /_/ \\_\\";
                     break;
 
+                case 'L':
+                    row[0] = row[0] + "  _      ";
+                    row[1] = row[1] + " | |     ";
+                    row[2] = row[2] + " | |     ";
+                    row[3] = row[3] + " | |     ";
+                    row[4] = row[4] + " | |____ ";
+                    row[5] = row[5] + " |______|";
+                    break;
+
                 default:
                     break;
             }
