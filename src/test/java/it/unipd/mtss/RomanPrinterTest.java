@@ -109,4 +109,38 @@ public class RomanPrinterTest {
         }
     }
 
+    @Test
+    public void test156(){
+        try(MockedStatic<IntegerToRoman> utilities = Mockito.mockStatic(IntegerToRoman.class)){
+            utilities.when(() -> IntegerToRoman.convert(156)).thenReturn("CLVI");
+            String exp =    "    _____   _       __      __  _____ \n" + 
+                            "   / ____| | |      \\ \\    / / |_   _|\n" +
+                            "  | |      | |       \\ \\  / /    | |  \n" +
+                            "  | |      | |        \\ \\/ /     | |  \n" +
+                            "  | |____  | |____     \\  /     _| |_ \n" +
+                            "   \\_____| |______|     \\/     |_____|\n";
+
+            String act = RomanPrinter.print(156);
+            
+            assertEquals(exp, act);
+        } 
+    }
+
+    @Test
+    public void test500(){
+        try(MockedStatic<IntegerToRoman> utilities = Mockito.mockStatic(IntegerToRoman.class)){
+            utilities.when(() -> IntegerToRoman.convert(500)).thenReturn("D");
+            String exp =    "    _____  \n" + 
+                            "   |  __ \\ \n" + 
+                            "   | |  | |\n" + 
+                            "   | |  | |\n" + 
+                            "   | |__| |\n" + 
+                            "   |_____/ \n";
+
+            String act = RomanPrinter.print(500);
+            
+            assertEquals(exp, act);
+        }
+    }
+
 }
