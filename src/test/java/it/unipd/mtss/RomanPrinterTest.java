@@ -58,4 +58,21 @@ public class RomanPrinterTest {
         }
     } 
 
+    @Test
+    public void test16(){
+        try(MockedStatic<IntegerToRoman> utilities = Mockito.mockStatic(IntegerToRoman.class)){
+            utilities.when(() -> IntegerToRoman.convert(16)).thenReturn("XVI");
+            String exp =    " __   __ __      __  _____ \n" +          
+                            " \\ \\ / / \\ \\    / / |_   _|\n" +
+                            "  \\ V /   \\ \\  / /    | |  \n" +
+                            "   > <     \\ \\/ /     | |  \n" +
+                            "  / . \\     \\  /     _| |_ \n" +
+                            " /_/ \\_\\     \\/     |_____|\n";
+
+            String act = RomanPrinter.print(16);
+            
+            assertEquals(exp, act);
+        }
+    } 
+
 }
