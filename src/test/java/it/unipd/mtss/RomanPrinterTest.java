@@ -92,4 +92,21 @@ public class RomanPrinterTest {
         }
     }
 
+    @Test
+    public void test100(){
+        try(MockedStatic<IntegerToRoman> utilities = Mockito.mockStatic(IntegerToRoman.class)){
+            utilities.when(() -> IntegerToRoman.convert(100)).thenReturn("C");
+            String exp =    "    _____ \n" + 
+                            "   / ____|\n" + 
+                            "  | |     \n" + 
+                            "  | |     \n" + 
+                            "  | |____ \n" + 
+                            "   \\_____|\n";
+
+            String act = RomanPrinter.print(100);
+            
+            assertEquals(exp, act);
+        }
+    }
+
 }
