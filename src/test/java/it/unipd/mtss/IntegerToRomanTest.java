@@ -6,7 +6,13 @@ import org.junit.Test;
 public class IntegerToRomanTest {
 
     @Test
-    public void test() {
+    public void test3() {
+        int num = 3;
+        String exp = "III";
+
+        String act = IntegerToRoman.convert(num);
+
+        assertEquals(exp, act);
     }
     
 }
