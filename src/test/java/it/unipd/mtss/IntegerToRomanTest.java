@@ -134,4 +134,35 @@ public class IntegerToRomanTest {
 
         assertEquals(exp, act);
     }
+
+    @Test
+    public void test607() {
+        int num = 607;
+        String exp = "DCVII";
+
+        String act = IntegerToRoman.convert(num);
+
+        assertEquals(exp, act);
+    }
+
+    @Test
+    public void test938() {
+        int num = 938;
+        String exp = "CMXXXVIII";
+
+        String act = IntegerToRoman.convert(num);
+
+        assertEquals(exp, act);
+    }
+
+    @Test
+    public void test1000() {
+        int num = 1000;
+        String exp = "M";
+
+        String act = IntegerToRoman.convert(num);
+
+        assertEquals(exp, act);
+    }
+
 }
