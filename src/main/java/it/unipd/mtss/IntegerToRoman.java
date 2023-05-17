@@ -19,14 +19,17 @@ public class IntegerToRoman {
             s = "IV";
         }else if(number == 5){
             s = "V";
-        }else{
+        }else if(number < 9){
             s = "V";
             number = number - 5;
             for(int i = 0; i < number; i++){
                 s = s + "I";
             }
+        }else if(number == 9){
+            s = "IX";
+        }else{
+            s = "X";
         }
-        
         return s;
     }
     
