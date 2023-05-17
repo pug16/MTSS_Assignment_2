@@ -165,4 +165,24 @@ public class IntegerToRomanTest {
         assertEquals(exp, act);
     }
 
+    @Test(expected = NumberOverFourThousandException.class)
+    public void testOver4000(){
+        int num = 4000;
+        IntegerToRoman.convert(num);
+    }
+
+    @Test(expected = NumberUnderOneException.class)
+    public void testUnderOne(){
+        int num = 0;
+        IntegerToRoman.convert(num);
+    }
+
+    @Test
+    public void testClass(){
+        int num = 73;
+        String exp = "LXXIII";
+        IntegerToRoman conv = new IntegerToRoman();
+        String act = conv.convert(num);
+        assertEquals(exp, act);
+    }
 }
