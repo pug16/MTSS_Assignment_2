@@ -94,4 +94,24 @@ public class IntegerToRomanTest {
 
         assertEquals(exp, act);
     }
+
+    @Test
+    public void test100() {
+        int num = 100;
+        String exp = "C";
+
+        String act = IntegerToRoman.convert(num);
+
+        assertEquals(exp, act);
+    }
+
+    @Test
+    public void test94() {
+        int num = 94;
+        String exp = "XCIV";
+
+        String act = IntegerToRoman.convert(num);
+
+        assertEquals(exp, act);
+    }
 }
