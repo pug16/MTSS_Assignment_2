@@ -8,29 +8,16 @@ package it.unipd.mtss;
 public class IntegerToRoman {
 
     public static String convert(int number){
-
-        String s = "";
-
-        if(number < 4){
-            for(int i = 0; i < number; i++){
-                s = s + "I";
+        int[] values = {10, 9, 5, 4, 1};
+        String[] r={"X","IX","V","IV","I"};
+        StringBuilder roman = new StringBuilder();
+        for(int i = 0; i < values.length; i++){
+            while(number >= values[i]){
+                number = number - values[i];
+                roman.append(r[i]);
             }
-        }else if(number == 4){
-            s = "IV";
-        }else if(number == 5){
-            s = "V";
-        }else if(number < 9){
-            s = "V";
-            number = number - 5;
-            for(int i = 0; i < number; i++){
-                s = s + "I";
-            }
-        }else if(number == 9){
-            s = "IX";
-        }else{
-            s = "X";
         }
-        return s;
+        return roman.toString();
     }
     
 }

@@ -55,4 +55,24 @@ public class IntegerToRomanTest {
         assertEquals(exp, act);
     }
     
+    @Test
+    public void test14() {
+        int num = 14;
+        String exp = "XIV";
+
+        String act = IntegerToRoman.convert(num);
+
+        assertEquals(exp, act);
+    }
+
+    @Test
+    public void test20() {
+        int num = 20;
+        String exp = "XX";
+
+        String act = IntegerToRoman.convert(num);
+
+        assertEquals(exp, act);
+    }
+
 }
