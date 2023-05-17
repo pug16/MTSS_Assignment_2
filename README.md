@@ -1,6 +1,6 @@
 ![Build workflow](https://github.com/pug16/MTSS_Assignment_2/actions/workflows/build.yml/badge.svg)
 ![Static Analysis workflow](https://github.com/pug16/MTSS_Assignment_2/actions/workflows/checkstyle.yml/badge.svg)
-[![Coverage Status](https://coveralls.io/repos/github/pug16/MTSS_Assignment_2/badge.svg?branch=feature/configurazione)](https://coveralls.io/github/pug16/MTSS_Assignment_2?branch=feature/configurazione)
+[![Coverage Status](https://coveralls.io/repos/github/pug16/MTSS_Assignment_2/badge.svg?branch=develop)](https://coveralls.io/github/pug16/MTSS_Assignment_2?branch=develop)
 
 # roman-number
 
